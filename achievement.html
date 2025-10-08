@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements</title>
+    <style>
+        * {
+            font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+            color: white;
+        }
+         body {
+            margin: 0;
+            background: linear-gradient(-45deg, #2c3e50, #4b4b4b, #bdc3c7, #6d7b8d);
+            background-size: 400% 400%;
+            animation: gradientMove 10s ease infinite;
+            /* min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        .whole-container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+          min-height: 100vh;
+        }
+
+        navbar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            display: flex;
+            /* justify-content: space-around; */
+            align-items: center;
+            gap: 0px;
+            flex-direction: column;
+            text-align: center;
+            flex-grow: 1;
+            padding: 20px;
+            /* background-color: #f4f4f4;
+             border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  */
+            margin: 20px;
+            font-size: 18px;
+            color: #333;
+            line-height: 0.5;
+
+        }
+
+        .achievements {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-height: 65%;
+        }
+
+        .card1 {
+            background:#bdc3c7;
+            border-radius: 20px;
+            box-shadow: 0px 1px 5px 2px #333;
+            padding: 20px;
+            width: 90%;
+            height: 85%;
+            max-width: 340px;
+           transition: transform 1s ease-in-out;
+        }
+
+        .card1:hover {
+            transform: scale(1.05);
+            
+        }
+
+        /* Image */
+        .card1 img {
+            width: 90%;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        /* Text */
+        .card1 p {
+            color: #444;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .card2 {
+            background: #bdc3c7;
+            border-radius: 20px;
+            box-shadow: 0px 1px 5px 2px #333;
+            padding: 20px;
+            width: 90%;
+            height: 85%;
+            max-width: 340px;
+           transition: transform 1s ease-in-out;
+        }
+
+        .card2:hover {
+            transform: scale(1.05);
+          
+        }
+
+        /* Image */
+        .card2 img {
+            width: 45%;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        /* Text */
+        .card2 p {
+            color: #444;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .whole-container {
+                height: 97vh;
+            }
+
+            .container {
+                font-size: 15px;
+                margin: 10px;
+                padding: 10px;
+                gap: 10px;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+            /* .whole-container {
+             height: 150vh;
+         } */
+            .container {
+                font-size: 16px;
+                margin: 10px;
+                padding: 10px;
+                gap: 10px;
+            }
+
+
+            .achievements {
+                display: flex;
+
+                gap: 20px;
+                justify-content: center;
+
+
+            }
+
+            /* .achievement-image {
+                width: 45%;
+                max-width: 300px;
+            } */
+            .card1 {
+                max-width: 200px;
+                flex-grow: 1;
+                height: 75%;
+                margin: 10px;
+            }
+
+            .card2 {
+                max-width: 200px;
+                flex-grow: 1;
+                height: 75%;
+                margin: 10px;
+            }
+
+            .card1 img {
+                width: 100%;
+                border-radius: 15px;
+                margin-bottom: 15px;
+            }
+
+            .card2 img {
+                width: 50%;
+                border-radius: 15px;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (max-width: 425px) {
+            .container {
+                font-size: 14px;
+                margin: 10px;
+                padding: 10px;
+                gap: 10px;
+            }
+
+            .container h1 {
+                line-height: 1;
+            }
+
+            .container p {
+                line-height: 1.3;
+            }
+
+            .achievements {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                max-width: 100%;
+                height: auto;
+            }
+
+            .card1 {
+                max-width: 250px;
+                flex-grow: 1;
+                height: auto;
+                margin: 10px;
+            }
+
+            .card2 {
+                max-width: 250px;
+                flex-grow: 1;
+                height: auto;
+                margin: 10px;
+            }
+
+            .card1 img {
+                width: 100%;
+                border-radius: 15px;
+                margin-bottom: 15px;
+            }
+
+            .card2 img {
+                width: 70%;
+                border-radius: 15px;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .container {
+                font-size: 13px;
+                margin: 10px;
+                padding: 10px;
+                gap: 10px;
+            }
+
+            .container h1 {
+                line-height: 1;
+            }
+
+            .container p {
+                line-height: 1;
+            }
+
+            .achievements {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                max-width: 100%;
+                height: auto;
+            }
+
+            .card1 {
+                max-width: 220px;
+                /* flex-grow: 1; */
+                height: 30%;
+                margin: 10px;
+            }
+
+
+            .card2 {
+                max-width: 220px;
+                /* flex-grow: 1; */
+                height: 53%;
+                margin: 10px;
+            }
+
+            .card1 img {
+                width: 100%;
+                border-radius: 15px;
+                margin-bottom: 15px;
+            }
+
+            .card2 img {
+                width: 90%;
+                border-radius: 15px;
+                margin-bottom: 15px;
+            }
+
+        }
+
+        @media (max-width: 425px) {
+            .whole-container {
+                height: 100%;
+            }
+        }
+
+        @media (max-width: 320px) {
+
+            .whole-container {
+                display: flex;
+                flex-direction: row;
+                gap: 0px;
+                height: 154vh;
+            }
+
+            navbar {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                background-color: #333;
+                padding: 10px;
+            }
+
+            navbar a {
+                font-size: 10px;
+                color: white;
+                padding: 14px 18px;
+                text-decoration: none;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="whole-container">
+        <navbar>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="achievement.html">Achievements</a>
+            <a href="project.html">Projects</a>
+        </navbar>
+        <div class="container">
+            <h1>My Achievements</h1>
+            <p>Here are some of my notable achievements:</p>
+            <div class="achievements">
+                <!-- Card 1 -->
+                <div class="card1">
+                    <a href="Assests/a2.jpg"><img src="Assests/a2.jpg" alt="HTML Certificate"></a>
+                    <p>I have obtained a certificate in Introduction to HTML.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card2">
+                    <a href="Assests/a1.jpg"><img src="Assests/a1.jpg" alt="Internship Certificate"></a>
+                    <p>I have completed an Internship in web development at Galwin Technology.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

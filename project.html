@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        * {
+            font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+            color: white;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(-45deg, #2c3e50, #4b4b4b, #bdc3c7, #6d7b8d);
+            background-size: 400% 400%;
+            animation: gradientMove 10s ease infinite;
+            /* min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        .whole-container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            min-height: 100vh;
+        }
+
+        navbar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            display: flex;
+            /* justify-content: space-around; */
+            align-items: center;
+            gap: 0px;
+            flex-direction: column;
+            text-align: center;
+            flex-grow: 1;
+            padding: 20px;
+            /* background-color: #f4f4f4;
+             border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  */
+            margin: 20px;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.5;
+
+        }
+
+        .project {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .card:hover .overlay {
+            opacity: 0.9;
+        }
+
+        .overlay h2 {
+            margin: 0;
+            font-size: 22px;
+            color: #000;
+        }
+
+        .overlay p {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #000;
+        }
+
+        .whole-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            padding: 10px;
+            background-color: #bdc3c7;
+            box-shadow: 0px 1px 5px 2px #333;
+            flex-wrap: wrap;
+            border-radius: 5px;
+            max-width: 300px;
+            padding: 20px;
+            margin: 10px;
+            height: 260px;
+            transition: transform 1s ease-in-out;
+        }
+
+        .whole-card:hover {
+            transform: scale(1.05);
+        }
+
+        button {
+            color: black;
+            border: 1px solid #333;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            font-size: 16px;
+            height: 30px;
+            width: 150px;
+        }
+
+        button:hover {
+            background-color: #333333;
+            color: white;
+        }
+
+
+        @media (max-width: 1024px) {
+            .card {
+                width: 190px;
+                height: 190px;
+            }
+
+
+            /* .project {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+            } */
+
+            .whole-card {
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                background-color: white;
+                box-shadow: 0px 1px 5px 2px #333;
+                flex-wrap: wrap;
+                border-radius: 5px;
+                max-width: 300px;
+                padding: 20px;
+                margin: 10px;
+                height: 275px;
+                transition: transform 1s ease-in-out;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 150px;
+                height: 150px;
+            }
+
+            .project {
+                display: flex;
+                /* flex-direction: column; */
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .whole-card {
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                background-color: white;
+                box-shadow: 0px 1px 5px 2px #333;
+                flex-wrap: wrap;
+                border-radius: 5px;
+                max-width: 300px;
+                padding: 20px;
+                margin: 10px;
+                height: 200px;
+                transition: transform 1s ease-in-out;
+            }
+
+            .whole-container {
+                height: 150vh;
+            }
+        }
+
+        @media (max-width: 425px) {
+            .project {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .whole-container {
+                gap: 10px;
+                height: 100%;
+            }
+
+        }
+
+        @media (max-width: 375px) {
+            .container {
+                font-size: 14px;
+                margin: 0px;
+                padding: 10px;
+                gap: 10px;
+            }
+
+            .whole-card {
+                height: 200px;
+                width: 70%;
+            }
+
+            .whole-container {
+                gap: 0px;
+            }
+        }
+
+        @media (max-width: 320px) {
+
+            .whole-container {
+                display: flex;
+                flex-direction: row;
+                gap: 0px;
+                height: 199vh;
+            }
+
+            navbar {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                background-color: #333;
+                padding: 10px;
+            }
+
+            navbar a {
+                font-size: 10px;
+                color: white;
+                padding: 14px 18px;
+                text-decoration: none;
+                text-align: center;
+            }
+
+            .whole-card {
+                height: 203px;
+                width: 90%;
+                gap: 10px;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="whole-container">
+        <navbar>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="achievement.html">Achievement</a>
+            <a href="project.html">Project</a>
+        </navbar>
+        <div class="container">
+            <h1>My Projects</h1>
+            <p>Welcome to the Projects section! Here, you'll find a showcase of my work, including descriptions,
+                technologies used, and links to live demos or repositories. Feel free to explore and reach out if you
+                have any questions or collaboration ideas!</p>
+            <div class="project">
+                <div class="whole-card">
+                    <div class="card">
+                        <img src="Assests/sunnycafe.png" alt="sunnycafe"></a>
+                        <div class="overlay">
+                            <a href=" https://jayalakshmi-jk.github.io/Sunny_cafe/">
+                                <h2>Sunny Cafe</h2>
+                            </a>
+                            <p>Website</p>
+                        </div>
+                    </div>
+                    <div class="view-project">
+                        <a href="https://github.com/jayalakshmi-jk/Sunny_cafe.git"><button>View On Github</button></a>
+                    </div>
+                </div>
+
+                <div class="whole-card">
+                    <div class="card">
+                        <img src="Assests/pothys.png" alt="pothys">
+                        <div class="overlay">
+                            <a href="https://jayalakshmi-jk.github.io/Pothys_Website_Task/">
+                                <h2>Pothys Mart Clone</h2>
+                            </a>
+                            <p>Website</p>
+                        </div>
+                    </div>
+                    <div class="view-project">
+                        <a href="https://github.com/jayalakshmi-jk/Pothys_Website_Task.git"><button>View On
+                                Github</button></a>
+                    </div>
+                </div>
+
+
+                <div class="whole-card">
+                    <div class="card">
+
+                        <img src="Assests/healthcare.png" alt="healthcare">
+                        <div class="overlay">
+                            <a href=" https://jayalakshmi-jk.github.io/Assessment_2_website/">
+                                <h2>Healthcare Task</h2>
+                            </a>
+                            <p>Website</p>
+                        </div>
+
+                    </div>
+                    <div class="view-project">
+                        <a href="https://github.com/jayalakshmi-jk/Assessment_2_website.git"><button>View On
+                                Github</button></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</body>
+
+</html>

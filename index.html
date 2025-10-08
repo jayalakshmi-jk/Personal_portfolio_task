@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+            color: white;
+        }
+         body {
+            margin: 0;
+            background: linear-gradient(-45deg, #2c3e50, #4b4b4b, #bdc3c7, #6d7b8d);
+            background-size: 400% 400%;
+            animation: gradientMove 10s ease infinite;
+            
+            /* display: flex; 
+            justify-content: center;
+            align-items: center; */
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .whole-container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+          min-height: 100vh;
+        }
+
+        navbar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            display: flex;
+            /* justify-content: space-around; */
+            align-items: center;
+            gap: 20px;
+            flex-direction: column;
+            text-align: center;
+            flex-grow: 1;
+            padding: 20px;
+            /* background-color: #f4f4f4;
+             border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  */
+            margin: 20px;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.5;
+
+        }
+        /* .logo:nth-child(1){
+            align-items: end;
+          
+        } */
+        .logo img {
+           height: 90px;
+           /* width: 10%   ; */
+
+        }
+
+        button {
+            background-color: #333333;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .download-btn {
+            text-decoration: none;
+        }
+
+        .download-btn button {
+            padding: 10px 15px;
+            /* background-color: #f4f4f4; */
+            transition: background-color 0.3s, color 0.3s;
+        }
+    
+
+        @media (max-width: 425px) {
+            .container {
+                font-size: 16px;
+                margin: 10px;
+                padding: 10px;
+                gap: 10px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+
+            .card {
+                width: 250px;
+                height: 250px;
+            }
+
+            .card img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        }
+
+        @media (max-width: 320px) {
+
+            .whole-container {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                height: 154vh;
+            }
+
+            navbar {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                background-color: #333;
+                padding: 10px;
+            }
+
+            button {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+
+            navbar a {
+                font-size: 10px;
+                color: white;
+                padding: 14px 18px;
+                text-decoration: none;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="whole-container">
+        <navbar>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="achievement.html">Achievements</a>
+            <a href="project.html">Projects</a>
+        </navbar>
+        <div class="container">
+              <!-- <div class="logo">
+              <img src="logo.png" alt="Jaya Image">
+               </div> -->
+            <h1>Personal Portfolio</h1>
+            <h4>Hey, I am Jaya!</h4>
+            <p>Welcome to my personal website. Here you can find information about me, my projects, and my achievements.
+            </p>
+            <a href="Assests/RESUME_JAYALAKSHMI.pdf" target="_blank" class="download-btn" download="RESUME_JAYALAKSHMI.pdf">
+                <i class="fas fa-download"></i> <button>Download Resume</button>
+            </a>
+      
+    </div>
+  
+
+
+
+</body>
+
+</html>
