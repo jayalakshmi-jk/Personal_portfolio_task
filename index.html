@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   
     <style>
         * {
             font-family: "Brush Script MT", "Lucida Handwriting", cursive;
@@ -112,6 +116,29 @@
             /* background-color: #f4f4f4; */
             transition: background-color 0.3s, color 0.3s;
         }
+        .footer-info {
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+            /* margin-top: 20px; */
+        }
+        .footer-social {
+            font-size: 20px;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            transition: transform 0.3s ease;
+            margin: 10px;
+        }
+
+        .fab {
+            color: #ffffff;
+        }
+
+        .fas {
+            color: #ffffff;
+        }
     
 
         @media (max-width: 425px) {
@@ -191,14 +218,30 @@
             <p>Welcome to my personal website. Here you can find information about me, my projects, and my achievements.
             </p>
             <a href="Assests/RESUME_JAYALAKSHMI.pdf" target="_blank" class="download-btn" download="RESUME_JAYALAKSHMI.pdf">
-                <i class="fas fa-download"></i> <button>Download Resume</button>
+                 <button>Download Resume</button>
             </a>
-      
     </div>
-  
-
-
-
+    </div>
+    <div class="footer-info">
+         <footer>
+                <p style="color: white;">&copy; 2025 All rights reserved.</p>
+            </footer>
+     <div class="footer-social">
+                <!-- Email -->
+                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/jayalakshmi-k-988988379/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/jayalakshmi-jk" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+           
+    </div>
 </body>
 
 </html>
